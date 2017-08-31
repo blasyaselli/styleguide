@@ -8,7 +8,7 @@
   * Use less tags as possible
 
 > *Bad*
-> ```
+> ```html
 > <div class="header">
 >   <div class="menu">
 >     <div class="primary-menu">
@@ -23,7 +23,7 @@
 > ```
 > 
 > *Good*
-> ```
+> ```html
 > <header class="header">
 >   <nav class="menu">
 >       <ul class="menu--primary">
@@ -39,7 +39,7 @@
 Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development.
 Additional resources: [BEM — Block Element Modifier](http://getbem.com/naming/)
 
-```
+```html
 <div class="block">...</div>
 <div class="block__element">...</div>
 <div class="block__element--modifier">...</div>
