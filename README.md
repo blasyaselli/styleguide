@@ -7,7 +7,7 @@
   * Use classes over IDs
   * Use less tags as possible
 
-*Bad*
+> *Bad*
 > ```
 > <div class="header">
 >   <div class="menu">
@@ -21,19 +21,19 @@
 > </div>
 > 
 > ```
-
-*Good*
-```
-<header class="header">
-  <nav class="menu">
-      <ul class="menu--primary">
-        <li><a href="">item 1</a></li>
-        <li><a href="">item 2</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
-```
+> 
+> *Good*
+> ```
+> <header class="header">
+>   <nav class="menu">
+>       <ul class="menu--primary">
+>         <li><a href="">item 1</a></li>
+>         <li><a href="">item 2</a></li>
+>       </ul>
+>     </div>
+>   </nav>
+> </header>
+> ```
 
 2. BEM
 Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development.
