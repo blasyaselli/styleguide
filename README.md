@@ -8,19 +8,19 @@
   * Use less tags as possible
 
 *Bad*
-```
-<div class="header">
-  <div class="menu">
-    <div class="primary-menu">
-      <ul>
-          <li><a href=""><span>item 1</span></a></li>
-          <li><a href="">item 2</a></li>
-        </ul>
-    </div>
-  </div>
-</div>
-
-```
+> ```
+> <div class="header">
+>   <div class="menu">
+>     <div class="primary-menu">
+>       <ul>
+>           <li><a href=""><span>item 1</span></a></li>
+>           <li><a href="">item 2</a></li>
+>         </ul>
+>     </div>
+>   </div>
+> </div>
+> 
+> ```
 
 *Good*
 ```
