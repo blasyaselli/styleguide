@@ -143,11 +143,9 @@ or, similarly to how `this` scopes in javascript, we can create a `$this` variab
 
 ### BEM - Modefiers and element blocks
 
-One problem we run into with BEM is having to modify the child element of a modified parent block.
+One problem we run into with BEM is having to modify the child element of a modified parent block. In this example we want to modify the link color inside form when it is active. There are several solutions:
 
-In this example we want to modify the link color inside form when it is active. There are several solutions:
-
-1. Nesting  with declaretive classes (not ideal because the purpose of BEM is to limit nesting)
+**Nesting by declaring classes (not ideal)**
 ```html
 
 <div class="form">
@@ -175,6 +173,10 @@ In this example we want to modify the link color inside form when it is active. 
 .form--active .form__link { color: blue}
 
 ```
+
+In the next example, we are going to output the same css but we will be using `#{$this}` to create an instance of the block inside the modifier. This is the best way to solve accessing a child element inside a parent block modifier.
+
+**Nesting with SASS variables**
 
 ```sass
 .block {
