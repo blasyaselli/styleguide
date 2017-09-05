@@ -95,20 +95,20 @@ Using the Sass ampersand `&`, we can nest elements inside the original block.
 ```
 
 
-With BEM, we stack the modifiers in the block element. NOT on the element level 
+With BEM, we stack the modifiers in the block element. **NOT on the element level. **
 
-Bad
-```html
-<div class="button">
-  <div class="button__icon--blue"></div>
-</div>
-```
-Good
-```html
-<div class="button button--blue ">
-  <div class="button__icon"></div>
-</div>
-```
+>Bad
+>```html
+><div class="button">
+>  <div class="button__icon--blue"></div>
+></div>
+>```
+>Good
+>```html
+><div class="button button--blue ">
+>  <div class="button__icon"></div>
+></div>
+>```
 
 However, we can eliminate the use of multiple class names on the HTML by extending the parent block using `@extend`
 
