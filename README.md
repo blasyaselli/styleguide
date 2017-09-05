@@ -35,10 +35,10 @@
 > </header>
 > ```
 
-### BEM - Basic
-Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development.
+## BEM - Basic
+Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development. 
 
-Additional resources: [BEM — Block Element Modifier](http://getbem.com/naming/)
+Overview and Additional Notes: [BEM — Block Element Modifier](http://getbem.com/naming/)
 
 ![alt text](https://i.imgur.com/JpnCkq5.png)
 
@@ -65,14 +65,16 @@ Basic Example of BEM with HTML/CSS
 </div>
 
 <!-- modified block -->
-<div class="block block__element--modifier">
+<div class="block block--modifier">
   <div class="block__element">...</div>
 </div>
 
 ```
-### BEM with SASS
+### BEM & SASS
 
-Using the Sass ampersand `&`, we can nest elements inside the original block.
+SASS and BEM are a match made in heaven. SASS has a lot of powerful features that are used to make much readable BEM code.
+
+Use the Sass ampersand `&` for nesting elements inside the original parent block.
 
 ```scss
 .block {
@@ -95,7 +97,7 @@ Using the Sass ampersand `&`, we can nest elements inside the original block.
 ```
 
 
-With BEM, we stack the modifiers in the block element. **NOT on the element level. **
+For MODIFIERS, we stack the modifiers in the block element. **NOT on the element level.**
 
 >Bad
 >```html
@@ -146,7 +148,7 @@ or, similarly to how `this` scopes in javascript, we can create a `$this` variab
 >}
 >```
 
-### BEM - Modefiers and element blocks
+### BEM & SASS - Modefiers and child elements
 
 One problem we run into with BEM is having to modify the child element of a modified parent block. In this example we want to modify the link color inside form when it is active. There are several solutions:
 
@@ -203,7 +205,6 @@ In the next example, we are going to output the same css but we will be using `#
     text-align: center;
     border: 1px solid red;
   }
-  
 }
 ```
 
