@@ -48,6 +48,72 @@ HTML
 <div class="block__element">...</div>
 <div class="block__element--modifier">...</div>
 ```
+
+Basic Example of BEM with HTML/CSS
+```
+<style>
+// Main Block
+.block {
+  width: 200px;
+  height: 100px;
+  background-color: red;
+}
+.block--modifier { // Main Block with modifier that overrides background from red to blue
+  background-color: blue;
+}
+
+.block__element { // Element inside Main Block
+  border: 1px solid red;
+}
+</style>
+
+<div class="block">
+  <div class="block__element">...</div>
+</div>
+
+<!-- modified block -->
+<div class="block block__element--modifier">
+  <div class="block__element">...</div>
+</div>
+
+```
+
+Typically in BEM, we stack the modifiers on the block element. If we have a button that contains a modifier for color and rounded corners, the html will be `<div class="button button--blue button--rounded"></div>`. However, this can create a lot of redudent harder to read HTML. To solve this problem, we will use the `@extend` feature in SASS that will allow us to extend the original block.
+
+```sass
+.button {
+  padding: 10px;
+  background-color: red;
+  &--blue {
+    @extend .button;
+    background-color: blue;
+  }
+  &--rounded {
+    @extend .button;
+    border-radius: 10px;
+  }
+}
+```
+
+or, to match the way we scope in javascript, we can create `$this` variable that serves as `.button`.
+```scss
+.button {
+  $this: &;
+  padding: 10px;
+  background-color: red;
+  &--blue {
+    @extend $this;
+    background-color: blue;
+  }
+  &--rounded {
+    @extend $this;
+    border-radius: 10px;
+  }
+}
+```
+
+
+
 ```sass
 .block {
   $this: &; // Asign .block to variable $this
