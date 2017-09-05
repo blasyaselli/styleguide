@@ -122,7 +122,9 @@ However, we can eliminate the use of multiple class names on the HTML by extendi
 >  ...
 ></div>
 >```
->or, to match the way we scope in javascript, we can create `$this` variable that serves as `.button`.
+
+or, similarly to how `this` scopes in javascript, we can create a `$this` variable that serves as a reference to the parent block `.button`.
+
 >```scss
 >.button {
 >  $this: &;
@@ -139,7 +141,40 @@ However, we can eliminate the use of multiple class names on the HTML by extendi
 >}
 >```
 
+### BEM - Modefiers and element blocks
 
+One problem we run into with BEM is having to modify the child element of a modified parent block.
+
+In this example we want to modify the link color inside form when it is active. There are several solutions:
+
+1. Nesting  with declaretive classes (not ideal because the purpose of BEM is to limit nesting)
+```html
+
+<div class="form">
+  <input class="form__input" type="text">
+  <div class="form__link"></div>
+</div>
+
+<div class="form--active">
+  <input class="form__input" type="text">
+  <div class="form__link"></div>
+</div>
+```
+```scss
+.form {
+  &--active {
+    @extend .form;
+    .form__link { color: blue; //Override original Property}
+  }
+  &__input {..}
+  &__link {color: red; }
+}
+
+// Output
+.form__link { color: red}
+.form--active .form__link { color: blue}
+
+```
 
 ```sass
 .block {
