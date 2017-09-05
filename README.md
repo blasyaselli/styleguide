@@ -72,7 +72,7 @@ Basic Example of BEM with HTML/CSS
 ```
 ### BEM with SASS
 
-SASS allows us to create a new element name attaching the prefix of the parent block. Using the Sass ampersand `&`, we can nest elements inside the original block.
+Using the Sass ampersand `&`, we can nest elements inside the original block.
 
 ```scss
 .block {
@@ -96,41 +96,48 @@ SASS allows us to create a new element name attaching the prefix of the parent b
 
 
 With BEM, we stack the modifiers in the block element. 
-`<div class="button button--blue button--rounded"></div>`
+```html
+<div class="button button--blue button--rounded">
+  ...
+</div>
+<div class="button button--blue button--rounded button--active">
+  ...
+</div>
+```
 However, we can eliminate the use of multiple class names on the HTML by extending the parent block using `@extend`
 
 
-```scss
-.button {
-  padding: 10px;
-  background-color: red;
-  &--blue {
-    @extend .button;
-    background-color: blue;
-  }
-  &--rounded {
-    @extend .button;
-    border-radius: 10px;
-  }
-}
-```
-
-or, to match the way we scope in javascript, we can create `$this` variable that serves as `.button`.
-```scss
-.button {
-  $this: &;
-  padding: 10px;
-  background-color: red;
-  &--blue {
-    @extend $this;
-    background-color: blue;
-  }
-  &--rounded {
-    @extend $this;
-    border-radius: 10px;
-  }
-}
-```
+>```scss
+>.button {
+>  padding: 10px;
+>  background-color: red;
+>  &--rounded {
+>    @extend .button;
+>    border-radius: 10px;
+>  }
+>}
+>```
+>```html
+><div class="button--rounded">
+>  ...
+></div>
+>```
+>or, to match the way we scope in javascript, we can create `$this` variable that serves as `.button`.
+>```scss
+>.button {
+>  $this: &;
+>  padding: 10px;
+>  background-color: red;
+>  &--blue {
+>    @extend $this;
+>    background-color: blue;
+>  }
+>  &--rounded {
+>    @extend $this;
+>    border-radius: 10px;
+>  }
+>}
+>```
 
 
 
