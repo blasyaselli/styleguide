@@ -50,7 +50,7 @@ HTML
 ```
 
 Basic Example of BEM with HTML/CSS
-```
+```html
 <style>
 // Main Block
 .block {
@@ -80,7 +80,7 @@ Basic Example of BEM with HTML/CSS
 
 Typically in BEM, we stack the modifiers on the block element. If we have a button that contains a modifier for color and rounded corners, the html will be `<div class="button button--blue button--rounded"></div>`. However, this can create a lot of redudent harder to read HTML. To solve this problem, we will use the `@extend` feature in SASS that will allow us to extend the original block.
 
-```sass
+```scss
 .button {
   padding: 10px;
   background-color: red;
