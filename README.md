@@ -96,6 +96,7 @@ Using the Sass ampersand `&`, we can nest elements inside the original block.
 
 
 With BEM, we stack the modifiers in the block element. NOT on the element level 
+
 Bad
 ```html
 <div class="button">
