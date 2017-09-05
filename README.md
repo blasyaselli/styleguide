@@ -185,13 +185,14 @@ In the next example, we are going to output the same css but we will be using `#
 
 **Nesting with SASS variables**
 
-```sass
+```scss
 .block {
   $this: &; // Asign .block to variable $this
   width: 200px;
   height: 100px;
   background-color: red;
   &--modifier {
+    @extend $this;
     background-color: blue;
     // Modifying an element with a parent modifier
     #{$this} {
