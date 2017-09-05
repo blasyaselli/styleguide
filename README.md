@@ -35,34 +35,27 @@
 > </header>
 > ```
 
-### BEM
+### BEM - Basic
 Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development.
 
 Additional resources: [BEM — Block Element Modifier](http://getbem.com/naming/)
 
 ![alt text](https://i.imgur.com/JpnCkq5.png)
 
-HTML
-```html
-<div class="block">...</div>
-<div class="block__element">...</div>
-<div class="block__element--modifier">...</div>
-```
-
 Basic Example of BEM with HTML/CSS
 ```html
 <style>
-// Main Block
 .block {
   width: 200px;
   height: 100px;
   background-color: red;
 }
-.block--modifier { // Main Block with modifier that overrides background from red to blue
+
+.block--modifier {
   background-color: blue;
 }
 
-.block__element { // Element inside Main Block
+.block__element {
   border: 1px solid red;
 }
 </style>
@@ -77,8 +70,35 @@ Basic Example of BEM with HTML/CSS
 </div>
 
 ```
+### BEM with SASS
 
-Typically in BEM, we stack the modifiers on the block element. If we have a button that contains a modifier for color and rounded corners, the html will be `<div class="button button--blue button--rounded"></div>`. However, this can create a lot of redudent harder to read HTML. To solve this problem, we will use the `@extend` feature in SASS that will allow us to extend the original block.
+SASS allows us to create a new element name attaching the prefix of the parent block. Using the Sass ampersand `&`, we can nest elements inside the original block.
+
+```scss
+.block {
+  &__element {
+    color: blue;
+  }
+  &__second-element {
+    float: left;
+  }
+}
+
+// The above will output
+
+.block__element {
+  color: blue;
+}
+.block__second-element {
+  float: left;
+}
+```
+
+
+With BEM, we stack the modifiers in the block element. 
+`<div class="button button--blue button--rounded"></div>`
+However, we can eliminate the use of multiple class names on the HTML by extending the parent block using `@extend`
+
 
 ```scss
 .button {
