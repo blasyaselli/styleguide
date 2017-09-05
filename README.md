@@ -35,6 +35,25 @@
 > </header>
 > ```
 
+## CSS Rules
+
+### Positioning Elements
+1. Prioritize floating left and floating right (over absolute positioning) as this will allow more responsive functionality. 
+2. Flexbox for layouts when applicable
+  1. Exception: horizontal positioning use `margin:  0 auto`
+  2. Exception: stacking rows use: `float: left; width: 100%`
+3. Absolute Position and Translate as a last resort, or only when necessary (fixed headers, loaders, popups). 
+4. Element Responsibility to push down on other elements. 
+
+### CSS/SASS
+1. Limit !importnat
+  1. Important!’s should only be used to override vendor classes that already have important! or to override vendor plugins that have inline CSS. 
+2. Media Queries should exist inside each class/element declaration and should not be combined with other elements. 
+3. CSS Shorthand
+  1. Use css shorthand as much as possible if you are declaring more than 2 values for margin, padding, border, animation.
+  2. The only exception to not using shorthand is Background. 
+  
+
 ## BEM - Basic
 Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development. 
 
@@ -188,14 +207,11 @@ In the next example, we are going to output the same css but we will be using `#
 ```scss
 .block {
   $this: &; // Asign .block to variable $this
-  width: 200px;
-  height: 100px;
   background-color: red;
   &--modifier {
     @extend $this;
     background-color: blue;
-    // Modifying an element with a parent modifier
-    #{$this} {
+    #{$this} {     // modifies element inside modifier
       &__element {
         border: 1px solid blue;
       }
@@ -209,24 +225,6 @@ In the next example, we are going to output the same css but we will be using `#
 }
 ```
 
-
-## CSS Rules
-
-### Positioning Elements
-1. Prioritize floating left and floating right (over absolute positioning) as this will allow more responsive functionality. 
-2. Flexbox for layouts when applicable
-  1. Exception: horizontal positioning use `margin:  0 auto`
-  2. Exception: stacking rows use: `float: left; width: 100%`
-3. Absolute Position and Translate as a last resort, or only when necessary (fixed headers, loaders, popups). 
-4. Element Responsibility to push down on other elements. 
-
-### CSS/SASS
-1. Limit !importnat
-  1. Important!’s should only be used to override vendor classes that already have important! or to override vendor plugins that have inline CSS. 
-2. Media Queries should exist inside each class/element declaration and should not be combined with other elements. 
-3. CSS Shorthand
-  1. Use css shorthand as much as possible if you are declaring more than 2 values for margin, padding, border, animation.
-  2. The only exception to not using shorthand is Background. 
 
 
 
