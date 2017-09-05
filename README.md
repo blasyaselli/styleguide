@@ -38,14 +38,38 @@
 ### BEM
 Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development.
 
-![alt text](https://i.imgur.com/JpnCkq5.png)
-
 Additional resources: [BEM — Block Element Modifier](http://getbem.com/naming/)
 
+![alt text](https://i.imgur.com/JpnCkq5.png)
+
+HTML
 ```html
 <div class="block">...</div>
 <div class="block__element">...</div>
 <div class="block__element--modifier">...</div>
+```
+```sass
+.block {
+  $this: &; // Asign .block to variable $this
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  &--modifier {
+    background-color: blue;
+    // Modifying an element with a parent modifier
+    #{$this} {
+      &__element {
+        border: 1px solid blue;
+      }
+    }
+  }
+
+  &__element {
+    text-align: center;
+    border: 1px solid red;
+  }
+  
+}
 ```
 
 
