@@ -35,8 +35,11 @@
 > </header>
 > ```
 
-2. BEM
+### BEM
 Block Element Modifier is a methodology that helps you to create reusable components and code sharing in front-end development.
+
+![alt text](https://i.imgur.com/JpnCkq5.png)
+
 Additional resources: [BEM — Block Element Modifier](http://getbem.com/naming/)
 
 ```html
@@ -44,6 +47,7 @@ Additional resources: [BEM — Block Element Modifier](http://getbem.com/naming/
 <div class="block__element">...</div>
 <div class="block__element--modifier">...</div>
 ```
+
 
 ## CSS Rules
 
