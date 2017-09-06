@@ -50,6 +50,28 @@ div {
   color: red;
 }
 
+### Specificity
+
+Don't make values and selectors hard to override. Minimize the use of `id`'s
+and avoid `!important`.
+
+```css
+/* bad */
+.bar {
+  color: green !important;
+}
+.foo {
+  color: red;
+}
+
+/* good */
+.foo.bar {
+  color: green;
+}
+.foo {
+  color: red;
+}
+
 ### Box model
 
 The box model should ideally be the same for the entire document. A global
@@ -142,18 +164,58 @@ More information on Flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox
 
 It is the element's responsibility to push down on other elements. While this rule is not strickly enforced, please be aware of it.
 
-```
+```scss
 /* Not ideal */
-.heading
-  margin-top: 20px;
+header {
+  margin: 0;
+
+  .menu
+    margin-top: 20px;
+  }
+
+  .item-below-menu {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
 }
 
-/* More ideal */
-.heading
-  margin-bottom: 20px;
+header {
+  margin: 20px;
+
+  .menu
+    margin-bottom: 10px;
+  }
+
+  .item-below-menu {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
 }
+
 ```
 
+### Animations
+
+Favor transitions over animations. Avoid animating other properties than
+`opacity` and `transform`.
+
+```css
+/* bad */
+div:hover {
+  animation: move 1s forwards;
+}
+@keyframes move {
+  100% {
+    margin-left: 100px;
+  }
+}
+
+/* good */
+div:hover {
+  transition: 1s;
+  transform: translateX(100px);
+}
+```
 
 ### CSS/SASS
 1. Limit !importnat
