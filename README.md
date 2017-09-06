@@ -35,7 +35,7 @@
 ## CSS Rules
 
 ### Syntax
-![alt Example](https://i.imgur.com/JpnCkq5.png)
+![alt Example](http://i.imgur.com/PyIwwrt.png)
 
 1. Always have a space between selector and opening bracket, between property and value.;
 2. Indent properties
