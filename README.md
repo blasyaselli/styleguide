@@ -34,6 +34,44 @@
 
 ## CSS Rules
 
+### Syntax
+![alt Example](https://i.imgur.com/JpnCkq5.png)
+
+1. Always have a space between selector and opening bracket, between property and value.;
+2. Indent properties
+3. New line between selectors.
+
+```scss
+/* bad */
+.login{
+  float:left;
+  widht:300px;
+  input {
+    color:red;
+    background-color:yellow;
+  }
+  button {
+    padding:20px;
+  }
+}
+
+/* good */
+.login {
+  float: left;
+  width: 300px;
+
+  input {
+    color: red;
+    background-color: yellow;
+  }
+
+  button {
+    padding: 20px;
+  }
+}
+```
+
+
 ### Positioning Elements
 1. Prioritize floating over absolute positioning (this will allow more responsive functionality. 
 2. Flexbox for layouts when applicable
@@ -56,7 +94,7 @@ Block Element Modifier is a methodology that helps you to create reusable compon
 
 Overview and Additional Notes: [BEM — Block Element Modifier](http://getbem.com/naming/)
 
-![alt text](https://i.imgur.com/JpnCkq5.png)
+![alt Example](https://i.imgur.com/JpnCkq5.png)
 
 Basic Example of BEM with HTML/CSS
 ```html
