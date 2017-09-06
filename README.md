@@ -33,11 +33,62 @@
 > ```
 
 ## CSS Rules
-
-### Syntax
 ![alt Example](http://i.imgur.com/PyIwwrt.png)
 
-1. Always have a space between selector and opening bracket, between property and value.;
+### Semicolons
+
+While the semicolon is technically a separator in CSS, always treat it as a terminator.
+
+```css
+/* bad */
+div {
+  color: red
+}
+
+/* good */
+div {
+  color: red;
+}
+
+### Box model
+
+The box model should ideally be the same for the entire document. A global
+`* { box-sizing: border-box; }` is fine, but don't change the default box model
+on specific elements if you can avoid it.
+
+```css
+/* bad */
+div {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* good */
+div {
+  padding: 10px;
+}
+```
+
+### Positioning
+
+There are many ways to position elements in CSS but try to restrict yourself to the
+properties/values below. By order of preference:
+
+```
+display: block;
+position: relative;
+display: flex;
+position: sticky;
+position: absolute;
+position: fixed;
+```
+
+**Important:** Keep in mind to also prioritize `float: left`  and `float:right` for fluid/responsive design before implementing flex.
+
+### Spacing
+
+1. Always have a space between selector and opening bracket, between property and value.
 2. Indent properties
 3. New line between selectors.
 
@@ -72,13 +123,37 @@
 ```
 
 
-### Positioning Elements
-1. Prioritize floating over absolute positioning (this will allow more responsive functionality. 
-2. Flexbox for layouts when applicable
-  1. Exception: horizontal positioning use `margin:  0 auto`
-  2. Exception: stacking rows use: `float: left; width: 100%`
-3. Absolute Position and Translate should be used as a last resort, or only when necessary (fixed headers, loaders, popups). 
-4. Element's responsibility to push down on other elements. 
+### Centering
+For horizontal positioning use `margin:  0 auto` before resorting flex.
+
+```scss
+/* Horizontal Centering without Flex */
+.container-to-center {
+  margin: 0 auto;
+  width: 500px;
+}
+
+```
+
+More information on Flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+### Element Push (with Margin)
+
+It is the element's responsibility to push down on other elements. While this rule is not strickly enforced, please be aware of it.
+
+```
+/* Not ideal */
+.heading
+  margin-top: 20px;
+}
+
+/* More ideal */
+.heading
+  margin-bottom: 20px;
+}
+```
+
 
 ### CSS/SASS
 1. Limit !importnat
