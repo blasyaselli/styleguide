@@ -74,13 +74,12 @@ A note on the language:
 
 > Work In progress...
 > 
-> Resource: 
-> [ARIA Documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
+Resource: 
+[ARIA Documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 
-> Test Software:
-> 
-> [JAWS](https://www.freedomscientific.com/Downloads/JAWS)
-> [NVA](https://www.nvaccess.org/download/)
+Test Software:
+[JAWS](https://www.freedomscientific.com/Downloads/JAWS)
+[NVA](https://www.nvaccess.org/download/)
 
 ## CSS Principles
 ![alt Example](http://i.imgur.com/PyIwwrt.png)
