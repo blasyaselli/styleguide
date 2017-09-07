@@ -1,43 +1,12 @@
 # Enterprise UI CSS/HTML Guidelines
-## HTML Principles
-### Keep HTML Semantic as possible.
-  * Use HTML5 Tags when applicable as opposed to divs `<sections>, <articles>, <header>, <footer>, <nav> etc.`
-  * Respect heading hierarchy and nesting (SEO and Accessibility)
-  `H1 > H2 > H3 > H4 > H5`
-  * Use classes over IDs
-  * Use less tags as possible
 
-> ```html
-> <!-- bad -->
-> <div class="header">
->   <div class="menu">
->     <div class="primary-menu">
->       <ul>
->           <li><a href=""><span>item 1</span></a></li>
->           <li><a href="">item 2</a></li>
->         </ul>
->     </div>
->   </div>
-> </div>
-> 
-> <!-- good -->
-> <header class="header">
->   <nav class="menu">
->       <ul class="menu--primary">
->         <li><a href="">item 1</a></li>
->         <li><a href="">item 2</a></li>
->       </ul>
->     </div>
->   </nav>
-> </header>
-> ```
-
-## CSS Rules
+## CSS
 ![alt Example](http://i.imgur.com/PyIwwrt.png)
 
 ### Formatting
 
 * Use the SCSS syntax.
+* Use hyphens when naming mixins, extends, classes, functions & variables: `span-columns` not `span_columns` or `spanColumns`.
 * Use one space between property and value: `width: 20px` not `width:20px`.
 * Use semicolon at the end of a value: `width: 20px;` not `width: 20px `
 * Use a blank line above a selector that has styles.
@@ -49,7 +18,7 @@
 * Use space around operands: `$variable * 1.5`, not `$variable*1.5`
 
 ### Selectors
-* 
+
 * Don't use ID's for style.
 * Avoid over-qualified selectors: `h1.page-title`, `div > .page-title`
 * Avoid nesting more than 3 selectors deep.
@@ -59,10 +28,10 @@
 ### Order
 
 * If a delecration has more than 5 properties, order them as follows:
-1. Layout Properties (`position`, `float`, `clear`, `display`)
-2. Box Model Properties (`width`, `height`, `margin`, `padding`)
-3. Visual Properties (`color`, `background`, `border`, `box-shadow`)
-4. Typography Properties (`font-size`, `font-family`, `text-align`, `text-transform`)
+  1. Layout Properties (`position`, `float`, `clear`, `display`)
+  2. Box Model Properties (`width`, `height`, `margin`, `padding`)
+  3. Visual Properties (`color`, `background`, `border`, `box-shadow`)
+  4. Typography Properties (`font-size`, `font-family`, `text-align`, `text-transform`)
 5. Misc Properties (`cursor`, `overflow`, `z-index`)å
 * Place `@extends` and `@includes` at the top of your declaration list.
 * Place media queries directly after the declaration list without a new line.
@@ -395,6 +364,39 @@ In the next example, we are going to output the same css but we will be using `#
   }
 }
 ```
+
+## HTML Principles
+### Keep HTML Semantic as possible.
+  * Use HTML5 Tags when applicable as opposed to divs `<sections>, <articles>, <header>, <footer>, <nav> etc.`
+  * Respect heading hierarchy and nesting (SEO and Accessibility)
+  `H1 > H2 > H3 > H4 > H5`
+  * Use classes over IDs
+  * Use less tags as possible
+
+> ```html
+> <!-- bad -->
+> <div class="header">
+>   <div class="menu">
+>     <div class="primary-menu">
+>       <ul>
+>           <li><a href=""><span>item 1</span></a></li>
+>           <li><a href="">item 2</a></li>
+>         </ul>
+>     </div>
+>   </div>
+> </div>
+> 
+> <!-- good -->
+> <header class="header">
+>   <nav class="menu">
+>       <ul class="menu--primary">
+>         <li><a href="">item 1</a></li>
+>         <li><a href="">item 2</a></li>
+>       </ul>
+>     </div>
+>   </nav>
+> </header>
+> ```
 
 
 
