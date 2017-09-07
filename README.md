@@ -425,36 +425,36 @@ or, similarly to how `this` scopes in javascript, we can create a `$this` variab
 
 ### BEM & SASS - Modefiers and child elements
 
-One problem we run into with BEM is having to modify the child ELEMENT of a modified parent BLOCK. In this example we want to modify the link color inside form when it is active. There are several solutions:
+One problem BEM users run into is having to modify a child ELEMENT of a modified parent BLOCK. In this example we want to modify the link color inside `.form` when it is active, `.form--active`. 
 
 **Nesting by declaring classes (not ideal)**
-```html
+>```html
+>
+><div class="form">
+>  <input class="form__input" type="text">
+>  <div class="form__link"></div>
+></div>
+>
+><div class="form--active">
+>  <input class="form__input" type="text">
+>  <div class="form__link"></div>
+></div>
+>```
+>```sass
+>.form {
+>  &--active {
+>    @extend .form;
+>    .form__link { color: blue; //Override original Property}
+>  }
+>  &__input {..}
+>  &__link {color: red; }
+>}
+>
+>// Output
+>.form__link { color: red}
+>.form--active .form__link { color: blue}
 
-<div class="form">
-  <input class="form__input" type="text">
-  <div class="form__link"></div>
-</div>
-
-<div class="form--active">
-  <input class="form__input" type="text">
-  <div class="form__link"></div>
-</div>
-```
-```sass
-.form {
-  &--active {
-    @extend .form;
-    .form__link { color: blue; //Override original Property}
-  }
-  &__input {..}
-  &__link {color: red; }
-}
-
-// Output
-.form__link { color: red}
-.form--active .form__link { color: blue}
-
-```
+>```
 
 In the next example, we are going to output the same css but we will be using `#{$this}` to create an instance of the block inside the modifier. This is the best way to solve accessing a child element inside a parent block modifier.
 
