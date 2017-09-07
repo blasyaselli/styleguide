@@ -35,21 +35,40 @@
 ## CSS Rules
 ![alt Example](http://i.imgur.com/PyIwwrt.png)
 
-### Semicolons
+### Formatting
 
-While the semicolon is technically a separator in CSS, always treat it as a terminator.
+* Use the SCSS syntax.
+* Use one space between property and value: `width: 20px` not `width:20px`.
+* Use semicolon at the end of a value: `width: 20px;` not `width: 20px `
+* Use a blank line above a selector that has styles.
+* Prefer kite variables and hex color codes `#fff` or `#FFF` not `white`.
+* Avoid using shorthand properties for only one value: `background-color: #ff0000;`, not `background: #ff0000;`
+* Use one space between selector and `{`.
+* Use only lowercase, except for hex or string values.
+* Use a leading zero in decimal numbers: `0.5` not `.5`
+* Use space around operands: `$variable * 1.5`, not `$variable*1.5`
 
-```css
-/* bad */
-div {
-  color: red
-}
+### Selectors
+* 
+* Don't use ID's for style.
+* Avoid over-qualified selectors: `h1.page-title`, `div > .page-title`
+* Avoid nesting more than 3 selectors deep.
+* Avoid nesting within a media query.
 
-/* good */
-div {
-  color: red;
-}
-```
+
+### Order
+
+* If a delecration has more than 5 properties, order them as follows:
+1. Layout Properties (`position`, `float`, `clear`, `display`)
+2. Box Model Properties (`width`, `height`, `margin`, `padding`)
+3. Visual Properties (`color`, `background`, `border`, `box-shadow`)
+4. Typography Properties (`font-size`, `font-family`, `text-align`, `text-transform`)
+5. Misc Properties (`cursor`, `overflow`, `z-index`)å
+* Place `@extends` and `@includes` at the top of your declaration list.
+* Place media queries directly after the declaration list without a new line.
+* Place pseudo-states and pseudo-elements second.
+* Place BEM elements third.
+
 
 ### Box model
 
@@ -97,7 +116,7 @@ position: fixed;
 /* bad */
 .login{
   float:left;
-  widht:300px;
+  width:300px;
   input {
     color:red;
     background-color:yellow;
@@ -158,8 +177,9 @@ header {
   }
 }
 
+/* Ideal */
 header {
-  margin: 20px;
+  margin-bottom: 20px;
 
   .menu
     margin-bottom: 10px;
