@@ -1,24 +1,23 @@
 # Enterprise UI CSS/HTML Guidelines
 
 ## Contents
-- [Enterprise UI CSS/HTML Guidelines](#enterprise-ui-csshtml-guidelines)
-    - [Contents](#contents)
-    - [HTML Principles](#html-principles)
-        - [Keep HTML Semantic as possible.](#keep-html-semantic-as-possible)
-    - [CSS Principles](#css-principles)
-        - [Formatting](#formatting)
-        - [Selectors](#selectors)
-        - [Order](#order)
-        - [!important Read this!!](#important-read-this)
-        - [Positioning](#positioning)
-    - [CSS Philosophies](#css-philosophies)
-        - [Pushing Elements (with Margins)](#pushing-elements-with-margins)
-        - [Centering](#centering)
-        - [Box model](#box-model)
-        - [Animations](#animations)
-    - [BEM - Basic](#bem---basic)
-        - [BEM & SASS](#bem--sass)
-        - [BEM & SASS - Modefiers and child elements](#bem--sass---modefiers-and-child-elements)
+
+- [HTML Principles](#html-principles)
+    - [Keep HTML Semantic as possible.](#keep-html-semantic-as-possible)
+- [CSS Principles](#css-principles)
+    - [Formatting](#formatting)
+    - [Selectors](#selectors)
+    - [Order](#order)
+    - [!important Read this!!](#important-read-this)
+    - [Positioning](#positioning)
+- [CSS Philosophies](#css-philosophies)
+    - [Pushing Elements (with Margins)](#pushing-elements-with-margins)
+    - [Centering](#centering)
+    - [Box model](#box-model)
+    - [Animations](#animations)
+- [BEM - Basic](#bem---basic)
+    - [BEM & SASS](#bem--sass)
+    - [BEM & SASS - Modefiers and child elements](#bem--sass---modefiers-and-child-elements)
 
 ## HTML Principles
 ### Keep HTML Semantic as possible.
