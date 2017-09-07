@@ -45,30 +45,30 @@ A note on the language:
   * Use classes over IDs
   * Use least tags as possible
 
-> ```html
-> <!-- bad -->
-> <div class="header">
->   <div class="menu">
->     <div class="primary-menu">
->       <ul>
->           <li><a href=""><span>item 1</span></a></li>
->           <li><a href="">item 2</a></li>
->         </ul>
->     </div>
->   </div>
-> </div>
-> 
-> <!-- good -->
-> <header class="header">
->   <nav class="menu">
->       <ul class="menu--primary">
->         <li><a href="">item 1</a></li>
->         <li><a href="">item 2</a></li>
->       </ul>
->     </div>
->   </nav>
-> </header>
-> ```
+    > ```html
+    > <!-- bad -->
+    > <div class="header">
+    >   <div class="menu">
+    >     <div class="primary-menu">
+    >       <ul>
+    >           <li><a href=""><span>item 1</span></a></li>
+    >           <li><a href="">item 2</a></li>
+    >         </ul>
+    >     </div>
+    >   </div>
+    > </div>
+    > 
+    > <!-- good -->
+    > <header class="header">
+    >   <nav class="menu">
+    >       <ul class="menu--primary">
+    >         <li><a href="">item 1</a></li>
+    >         <li><a href="">item 2</a></li>
+    >       </ul>
+    >     </div>
+    >   </nav>
+    > </header>
+    > ```
 
 
 ### Accessibility 
@@ -99,25 +99,25 @@ Test Software:
 * Prefer kite variables and hex color codes `#fff` or `#FFF` not `white`.
 * Avoid using shorthand properties for only one value: `background-color: #ff0000;`, not `background: #ff0000;`.
 * Use shorthand properties to combine values when 3 or more are declared.
-> ```scss
-> // Bad
-> .post {
->   margin-top: 10px;
->   margin-bottom: 10px;
->   margin-right: 0px;
->   margin-left: 0px;
-> }
-> 
-> // Better
-> .post {
->   margin: 10px 0px 10px 0px;
-> }
-> 
-> // Best
-> .post {
->   margin: 10px 0px;
-> }
-> ```
+    > ```scss
+    > // Bad
+    > .post {
+    >   margin-top: 10px;
+    >   margin-bottom: 10px;
+    >   margin-right: 0px;
+    >   margin-left: 0px;
+    > }
+    > 
+    > // Better
+    > .post {
+    >   margin: 10px 0px 10px 0px;
+    > }
+    > 
+    > // Best
+    > .post {
+    >   margin: 10px 0px;
+    > }
+    > ```
 * Use one space between selector and `{`.
 * Use only lowercase, except for hex or string values.
 * Use a leading zero in decimal numbers: `0.5` not `.5`.
