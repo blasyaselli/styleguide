@@ -251,37 +251,6 @@ position: fixed;
 * Avoid pushing an element with paddings, use margins.
 * Typical, push down and right. It is the element's responsibility to push down on other elements. While this rule is not strickly enforced, please be aware of it.
 
-```scss
-/* Not ideal */
-header {
-  margin: 0;
-
-  .menu
-    margin-top: 20px;
-  }
-
-  .item-below-menu {
-    margin-top: 10px;
-    margin-bottom: 0px;
-  }
-}
-
-/* Ideal */
-header {
-  margin-bottom: 20px;
-
-  .menu
-    margin-bottom: 10px;
-  }
-
-  .item-below-menu {
-    margin-top: 10px;
-    margin-bottom: 0px;
-  }
-}
-
-```
-
 ![alt Example](images/push.png)
 
 
