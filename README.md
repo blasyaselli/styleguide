@@ -420,6 +420,7 @@ However, we can eliminate the use of multiple class names on the HTML by extendi
 >.button {
 >  padding: 10px;
 >  background-color: red;
+>
 >  &--rounded {
 >    @extend .button;
 >    border-radius: 10px;
@@ -439,10 +440,12 @@ or, similarly to how `this` scopes in javascript, we can create a `$this` variab
 >  $this: &;
 >  padding: 10px;
 >  background-color: red;
+>
 >  &--blue {
 >    @extend $this;
 >    background-color: blue;
 >  }
+>
 >  &--rounded {
 >    @extend $this;
 >    border-radius: 10px;
@@ -473,7 +476,9 @@ One problem BEM users run into is having to modify a child ELEMENT of a modified
 >    @extend .form;
 >    .form__link { color: blue; //Override original Property}
 >  }
+>
 >  &__input {..}
+>
 >  &__link {color: red; }
 >}
 >
