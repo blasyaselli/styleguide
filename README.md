@@ -351,7 +351,7 @@ SASS and BEM are a match made in heaven. SASS has a lot of powerful features tha
 
 Use the Sass ampersand `&` for nesting elements inside the original parent block.
 
-```scss
+```sass
 .block {
   &__element {
     color: blue;
