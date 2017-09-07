@@ -349,9 +349,10 @@ Basic Example of BEM with HTML/CSS
 
 SASS and BEM are a match made in heaven. SASS has a lot of powerful features that are used to make much readable BEM code.
 
-Use the Sass ampersand `&` for nesting elements inside the original parent block.
+Use the Sass ampersand `&` for nesting elements inside the original parent BLOCK.
 
 ```sass
+// SASS File
 .block {
   &__element {
     color: blue;
@@ -362,7 +363,6 @@ Use the Sass ampersand `&` for nesting elements inside the original parent block
 }
 
 // The above will output
-
 .block__element {
   color: blue;
 }
@@ -372,7 +372,7 @@ Use the Sass ampersand `&` for nesting elements inside the original parent block
 ```
 
 
-For MODIFIERS, we stack the modifiers in the block element. **NOT on the element level.**
+For MODIFIERS, we stack the modifiers in the BLOCK level. **NOT on the ELEMENT level.**
 
 >Bad
 >```html
@@ -387,7 +387,7 @@ For MODIFIERS, we stack the modifiers in the block element. **NOT on the element
 ></div>
 >```
 
-However, we can eliminate the use of multiple class names on the HTML by extending the parent block using `@extend`
+However, we can eliminate the use of multiple class names on the HTML by extending the parent BLOCK using `@extend`
 
 >```sass
 >.button {
@@ -405,7 +405,7 @@ However, we can eliminate the use of multiple class names on the HTML by extendi
 ></div>
 >```
 
-or, similarly to how `this` scopes in javascript, we can create a `$this` variable that serves as a reference to the parent block `.button`.
+or, similarly to how `this` scopes in javascript, we can create a `$this` variable that serves as a reference to the parent BLOCK `.button`.
 
 >```sass
 >.button {
@@ -425,7 +425,7 @@ or, similarly to how `this` scopes in javascript, we can create a `$this` variab
 
 ### BEM & SASS - Modefiers and child elements
 
-One problem we run into with BEM is having to modify the child element of a modified parent block. In this example we want to modify the link color inside form when it is active. There are several solutions:
+One problem we run into with BEM is having to modify the child ELEMENT of a modified parent BLOCK. In this example we want to modify the link color inside form when it is active. There are several solutions:
 
 **Nesting by declaring classes (not ideal)**
 ```html
