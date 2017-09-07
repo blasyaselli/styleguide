@@ -18,6 +18,7 @@ A note on the language:
 
 - [HTML Principles](#html-principles)
     - [Keep HTML Semantic as possible.](#keep-html-semantic-as-possible)
+    - [Accessibility](#accessibility)
 - [CSS Principles](#css-principles)
     - [Formatting](#formatting)
     - [Selectors](#selectors)
@@ -41,7 +42,7 @@ A note on the language:
   * Respect heading hierarchy and nesting (SEO and Accessibility)
   `H1 > H2 > H3 > H4 > H5`
   * Use classes over IDs
-  * Use less tags as possible
+  * Use least tags as possible
 
 > ```html
 > <!-- bad -->
@@ -68,6 +69,15 @@ A note on the language:
 > </header>
 > ```
 
+
+### Accessibility 
+
+>Work In progress...
+> Resource: 
+> [ARIA Documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
+> Test Software:
+> [JAWS](https://www.freedomscientific.com/Downloads/JAWS)
+> [NVA](https://www.nvaccess.org/download/)
 
 ## CSS Principles
 ![alt Example](http://i.imgur.com/PyIwwrt.png)
