@@ -1,5 +1,39 @@
 # Enterprise UI CSS/HTML Guidelines
 
+## HTML Principles
+### Keep HTML Semantic as possible.
+  * Use HTML5 Tags when applicable as opposed to divs `<sections>, <articles>, <header>, <footer>, <nav> etc.`
+  * Respect heading hierarchy and nesting (SEO and Accessibility)
+  `H1 > H2 > H3 > H4 > H5`
+  * Use classes over IDs
+  * Use less tags as possible
+
+> ```html
+> <!-- bad -->
+> <div class="header">
+>   <div class="menu">
+>     <div class="primary-menu">
+>       <ul>
+>           <li><a href=""><span>item 1</span></a></li>
+>           <li><a href="">item 2</a></li>
+>         </ul>
+>     </div>
+>   </div>
+> </div>
+> 
+> <!-- good -->
+> <header class="header">
+>   <nav class="menu">
+>       <ul class="menu--primary">
+>         <li><a href="">item 1</a></li>
+>         <li><a href="">item 2</a></li>
+>       </ul>
+>     </div>
+>   </nav>
+> </header>
+> ```
+
+
 ## CSS
 ![alt Example](http://i.imgur.com/PyIwwrt.png)
 
@@ -26,17 +60,55 @@
 
 
 ### Order
-
+* Place `@extends` and `@includes` at the top of your declaration list. **EXCEPT** when include is a media query mixin.
 * If a delecration has more than 5 properties, order them as follows:
- 1. Layout Properties (`position`, `float`, `clear`, `display`)
- 2. Box Model Properties (`width`, `height`, `margin`, `padding`)
- 3. Visual Properties (`color`, `background`, `border`, `box-shadow`)
+  1. Layout Properties (`position`, `float`, `clear`, `display`)
+  2. Box Model Properties (`width`, `height`, `margin`, `padding`)
+  3. Visual Properties (`color`, `background`, `border`, `box-shadow`)
   4. Typography Properties (`font-size`, `font-family`, `text-align`, `text-transform`)
-5. Misc Properties (`cursor`, `overflow`, `z-index`)å
-* Place `@extends` and `@includes` at the top of your declaration list.
+  5. Misc Properties (`cursor`, `overflow`, `z-index`)å
 * Place media queries directly after the declaration list without a new line.
 * Place pseudo-states and pseudo-elements second.
 * Place BEM elements third.
+
+Example:
+```scss
+.post {
+  &__heading {
+    font-size: 10px;
+    padding: 10px;
+    &:hover {
+      color: blue;
+    }
+  }
+
+  &__seperator {
+    width: 100%;
+    float: left;
+    margin: 14px 0px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__content {
+    @extend .content;
+    position: realtive;
+    float: left;
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    border: 1px solid black;
+    text-align: left;
+    overflow: hidden;
+    z-index: 0;
+    @include media-breakpoint-down(xl) {
+      width: 300px;
+      float: none;
+      text-align: center;
+    }
+  }
+}
 
 
 ### Box model
@@ -365,38 +437,6 @@ In the next example, we are going to output the same css but we will be using `#
 }
 ```
 
-## HTML Principles
-### Keep HTML Semantic as possible.
-  * Use HTML5 Tags when applicable as opposed to divs `<sections>, <articles>, <header>, <footer>, <nav> etc.`
-  * Respect heading hierarchy and nesting (SEO and Accessibility)
-  `H1 > H2 > H3 > H4 > H5`
-  * Use classes over IDs
-  * Use less tags as possible
-
-> ```html
-> <!-- bad -->
-> <div class="header">
->   <div class="menu">
->     <div class="primary-menu">
->       <ul>
->           <li><a href=""><span>item 1</span></a></li>
->           <li><a href="">item 2</a></li>
->         </ul>
->     </div>
->   </div>
-> </div>
-> 
-> <!-- good -->
-> <header class="header">
->   <nav class="menu">
->       <ul class="menu--primary">
->         <li><a href="">item 1</a></li>
->         <li><a href="">item 2</a></li>
->       </ul>
->     </div>
->   </nav>
-> </header>
-> ```
 
 
 
