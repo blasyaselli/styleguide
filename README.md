@@ -389,7 +389,7 @@ For MODIFIERS, we stack the modifiers in the block element. **NOT on the element
 
 However, we can eliminate the use of multiple class names on the HTML by extending the parent block using `@extend`
 
->```scss
+>```sass
 >.button {
 >  padding: 10px;
 >  background-color: red;
@@ -407,7 +407,7 @@ However, we can eliminate the use of multiple class names on the HTML by extendi
 
 or, similarly to how `this` scopes in javascript, we can create a `$this` variable that serves as a reference to the parent block `.button`.
 
->```scss
+>```sass
 >.button {
 >  $this: &;
 >  padding: 10px;
@@ -440,7 +440,7 @@ One problem we run into with BEM is having to modify the child element of a modi
   <div class="form__link"></div>
 </div>
 ```
-```scss
+```sass
 .form {
   &--active {
     @extend .form;
@@ -460,7 +460,7 @@ In the next example, we are going to output the same css but we will be using `#
 
 **Nesting with SASS variables**
 
-```scss
+```sass
 .block {
   $this: &; // Asign .block to variable $this
   background-color: red;
