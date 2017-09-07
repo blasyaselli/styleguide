@@ -1,7 +1,5 @@
 # Enterprise UI CSS/HTML Guidelines
 
-## Contents
-
 - [HTML Principles](#html-principles)
     - [Keep HTML Semantic as possible.](#keep-html-semantic-as-possible)
 - [CSS Principles](#css-principles)
@@ -427,14 +425,14 @@ or, similarly to how `this` scopes in javascript, we can create a `$this` variab
 
 One problem BEM users run into is having to modify a child ELEMENT of a modified parent BLOCK. In this example we want to modify the link color inside `.form` when it is active, `.form--active`. 
 
-**Nesting by declaring classes (not ideal)**
+**Nesting by declaring classes inside Modified BLOCK**
 >```html
->
+>// HTML without form active
 ><div class="form">
 >  <input class="form__input" type="text">
 >  <div class="form__link"></div>
 ></div>
->
+>//HTML with active form
 ><div class="form--active">
 >  <input class="form__input" type="text">
 >  <div class="form__link"></div>
@@ -453,7 +451,6 @@ One problem BEM users run into is having to modify a child ELEMENT of a modified
 >// Output
 >.form__link { color: red}
 >.form--active .form__link { color: blue}
-
 >```
 
 In the next example, we are going to output the same css but we will be using `#{$this}` to create an instance of the block inside the modifier. This is the best way to solve accessing a child element inside a parent block modifier.
@@ -464,6 +461,7 @@ In the next example, we are going to output the same css but we will be using `#
 .block {
   $this: &; // Asign .block to variable $this
   background-color: red;
+
   &--modifier {
     @extend $this;
     background-color: blue;
@@ -480,6 +478,7 @@ In the next example, we are going to output the same css but we will be using `#
   }
 }
 ```
+
 
 
 
