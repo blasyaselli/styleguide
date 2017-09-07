@@ -14,6 +14,7 @@ A note on the language:
 * "Prefer" indicates a better option and its alternative to watch out for.
 * "Use" is a positive instruction.
 
+## Table of Contents
 
 - [HTML Principles](#html-principles)
     - [Keep HTML Semantic as possible.](#keep-html-semantic-as-possible)
@@ -31,7 +32,6 @@ A note on the language:
 - [BEM - Basic](#bem---basic)
     - [BEM & SASS](#bem--sass)
     - [BEM & SASS - Modefiers and child elements](#bem--sass---modefiers-and-child-elements)
-
 
 
 ## HTML Principles
