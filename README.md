@@ -28,9 +28,9 @@
 ### Order
 
 * If a delecration has more than 5 properties, order them as follows:
-  1. Layout Properties (`position`, `float`, `clear`, `display`)
-  2. Box Model Properties (`width`, `height`, `margin`, `padding`)
-  3. Visual Properties (`color`, `background`, `border`, `box-shadow`)
+ 1. Layout Properties (`position`, `float`, `clear`, `display`)
+ 2. Box Model Properties (`width`, `height`, `margin`, `padding`)
+ 3. Visual Properties (`color`, `background`, `border`, `box-shadow`)
   4. Typography Properties (`font-size`, `font-family`, `text-align`, `text-transform`)
 5. Misc Properties (`cursor`, `overflow`, `z-index`)å
 * Place `@extends` and `@includes` at the top of your declaration list.
