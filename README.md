@@ -73,7 +73,7 @@ A note on the language:
 ### Accessibility 
 
 > Work In progress...
-> 
+
 Resource: 
 - [ARIA Documentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 
