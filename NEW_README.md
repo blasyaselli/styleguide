@@ -19,6 +19,7 @@
     - [BEM - Basic](#bem---basic)
         - [BEM & SASS](#bem--sass)
         - [BEM & SASS - Modefiers and child elements](#bem--sass---modefiers-and-child-elements)
+- [{$this} {     // modifies element inside modifier](#this-------modifies-element-inside-modifier)
 
 ## HTML Principles
 ### Keep HTML Semantic as possible.
@@ -481,8 +482,3 @@ In the next example, we are going to output the same css but we will be using `#
   }
 }
 ```
-
-
-
-
-
