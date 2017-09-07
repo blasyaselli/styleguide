@@ -40,13 +40,15 @@
 ### Formatting
 
 * Use the SCSS syntax.
+* Follow BEM methedology (see Bem)
+* Indent properties (2 spaces)
 * Use hyphens when naming mixins, extends, classes, functions & variables: `span-columns` not `span_columns` or `spanColumns`.
 * Use one space between property and value: `width: 20px` not `width:20px`.
-* Use semicolon at the end of a declaration: `width: 20px;` not `width: 20px `
+* Use semicolon at the end of a declaration: `width: 20px;` not `width: 20px `.
 * Use a blank line above a selector that has styles.
 * Prefer kite variables and hex color codes `#fff` or `#FFF` not `white`.
-* Avoid using shorthand properties for only one value: `background-color: #ff0000;`, not `background: #ff0000;`
-* Use shorthand properties to combine properties when possible
+* Avoid using shorthand properties for only one value: `background-color: #ff0000;`, not `background: #ff0000;`.
+* Use shorthand properties to combine values when 3 or more are declared.
 > ```scss
 > // Bad
 > .post {
@@ -68,28 +70,59 @@
 > ```
 * Use one space between selector and `{`.
 * Use only lowercase, except for hex or string values.
-* Use a leading zero in decimal numbers: `0.5` not `.5`
-* Use space around operands: `$variable * 1.5`, not `$variable*1.5`
+* Use a leading zero in decimal numbers: `0.5` not `.5`.
+* Use space around operands: `$variable * 1.5`, not `$variable*1.5`.
+
+```scss
+// Bad
+.login{
+  float:left;
+  width:300px;
+  input {
+    color:red;
+    background-color:yellow;
+  }
+  button {
+    padding:20px;
+  }
+}
+
+// Good
+.login {
+  float: left;
+  width: 300px;
+
+  input {
+    color: red;
+    background-color: yellow;
+  }
+
+  button {
+    padding: 20px;
+  }
+}
+```
 
 ### Selectors
 
 * Don't use ID's for style.
-* Avoid over-qualified selectors: `h1.page-title`, `div > .page-title`
+* Avoid over-qualified selectors: `h1.page-title`, `div > .page-title`.
 * Avoid nesting more than 3 selectors deep.
 * Avoid nesting within a media query.
 
 
 ### Order
-* Place `@extends` and `@includes` at the top of your declaration list. **EXCEPT** when include is a media query mixin.
-* If a delecration has more than 5 properties, order them as follows:
+* Place `@extends` and `@includes` at the top of your declaration list. **EXCEPT** when `@include` is a media query mixin.
+* Place media queries directly after the declaration list without a new line.
+* If 5 or more delecration, order them as follows:
   1. Layout Properties (`position`, `float`, `clear`, `display`)
   2. Box Model Properties (`width`, `height`, `margin`, `padding`)
   3. Visual Properties (`color`, `background`, `border`, `box-shadow`)
   4. Typography Properties (`font-size`, `font-family`, `text-align`, `text-transform`)
   5. Misc Properties (`cursor`, `overflow`, `z-index`)å
-* Place media queries directly after the declaration list without a new line.
-* Place pseudo-states and pseudo-elements second.
-* Place BEM elements third.
+* Place pseudo-states and pseudo-elements before BEM elements.
+* Place BEM Modifiers before BEM elements (see BEM).
+* Avoid empty lines between closing brackets `}`.
 
 Example:
 ```scss
@@ -127,9 +160,16 @@ Example:
       float: none;
       text-align: center;
     }
+
+    p {
+      line-height: 1em;
+    }
   }
 }
+```
 
+### !important Read this!!
+* Limit !importnat - Important!’s should only be used to override vendor classes that already have important! or to override vendor plugins that have inline CSS. Or if Blas says you can.
 
 ### Box model
 
@@ -138,14 +178,14 @@ The box model should ideally be the same for the entire document. A global
 on specific elements if you can avoid it.
 
 ```css
-/* bad */
+// Bad
 div {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
 }
 
-/* good */
+// Good
 div {
   padding: 10px;
 }
@@ -167,42 +207,6 @@ position: fixed;
 
 **Important:** Keep in mind to also prioritize `float: left`  and `float:right` for fluid/responsive design before implementing flex.
 
-### Spacing
-
-1. Always have a space between selector and opening bracket, between property and value.
-2. Indent properties
-3. New line between selectors.
-
-```scss
-/* bad */
-.login{
-  float:left;
-  width:300px;
-  input {
-    color:red;
-    background-color:yellow;
-  }
-  button {
-    padding:20px;
-  }
-}
-
-/* good */
-.login {
-  float: left;
-  width: 300px;
-
-  input {
-    color: red;
-    background-color: yellow;
-  }
-
-  button {
-    padding: 20px;
-  }
-}
-```
-
 
 ### Centering
 For horizontal positioning use `margin:  0 auto` before resorting flex.
@@ -213,15 +217,15 @@ For horizontal positioning use `margin:  0 auto` before resorting flex.
   margin: 0 auto;
   width: 500px;
 }
-
 ```
 
 More information on Flex: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 
-### Element Push (with Margin)
+### Pushing Elements (with Margins)
 
-It is the element's responsibility to push down on other elements. While this rule is not strickly enforced, please be aware of it.
+* Avoid pushing an element with paddings, use margins.
+* Typical, push down and right. It is the element's responsibility to push down on other elements. While this rule is not strickly enforced, please be aware of it.
 
 ```scss
 /* Not ideal */
@@ -261,8 +265,10 @@ Favor transitions over animations. Avoid animating other properties than
 
 ```css
 /* bad */
-div:hover {
-  animation: move 1s forwards;
+div {
+  &:hover {
+    animation: move 1s forwards;
+  }
 }
 @keyframes move {
   100% {
@@ -271,19 +277,14 @@ div:hover {
 }
 
 /* good */
-div:hover {
-  transition: 1s;
-  transform: translateX(100px);
+div {
+  &:hover {
+    transition: 1s;
+    transform: translateX(100px);
+  }
 }
 ```
 
-### CSS/SASS
-1. Limit !importnat
-  1. Important!’s should only be used to override vendor classes that already have important! or to override vendor plugins that have inline CSS. 
-2. Media Queries should exist inside each class/element declaration and should not be combined with other elements. 
-3. CSS Shorthand
-  1. Use css shorthand as much as possible if you are declaring more than 2 values for margin, padding, border, animation.
-  2. The only exception to not using shorthand is Background. 
 
 
 ## BEM - Basic
