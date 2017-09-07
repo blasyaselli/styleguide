@@ -82,7 +82,7 @@ Test Software:
 - [NVA](https://www.nvaccess.org/download/)
 
 ## CSS Principles
-![alt Example](images/cssrules.png)
+![alt Example](images/cssrule.png)
 
 ### Formatting
 
@@ -120,6 +120,7 @@ Test Software:
 * Use a leading zero in decimal numbers: `0.5` not `.5`.
 * Use space around operands: `$variable * 1.5`, not `$variable*1.5`.
 
+Example: 
 ```scss
 // Bad
 .login{
