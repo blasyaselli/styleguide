@@ -82,7 +82,7 @@ Test Software:
 - [NVA](https://www.nvaccess.org/download/)
 
 ## CSS Principles
-![alt Example](http://i.imgur.com/PyIwwrt.png)
+![alt Example](images/cssrules.png)
 
 ### Formatting
 
@@ -174,6 +174,14 @@ Test Software:
 Example:
 ```scss
 .post {
+  background-color: white;
+  width: 400px;
+
+  &--full-width {
+    @extend .post;
+    width: 100%
+  }
+
   &__heading {
     font-size: 10px;
     padding: 10px;
@@ -216,7 +224,7 @@ Example:
 ```
 
 ### !important Read this!!
-* Limit the use of `!important` - They should only be used to override vendor classes that already have important! or to override vendor plugins that have inline CSS. Or if Blas says you can.
+* Limit the use of `!important` - They should only be used to override vendor classes that already have `!important` or to override vendor plugins that have inline CSS. Or if Blas says you can.
 
 
 ### Positioning
@@ -273,6 +281,9 @@ header {
 }
 
 ```
+
+![alt Example](images/push.png)
+
 
 ### Centering
 
@@ -342,7 +353,7 @@ Block Element Modifier is a methodology that helps you to create reusable compon
 
 Overview and Additional Notes: [BEM — Block Element Modifier](http://getbem.com/naming/)
 
-![alt Example](https://i.imgur.com/JpnCkq5.png)
+![alt Example](images/bem-example.png)
 
 Basic Example of BEM with HTML/CSS
 ```html
