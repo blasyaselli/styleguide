@@ -169,7 +169,7 @@ Example:
 ```
 
 ### !important Read this!!
-* Limit !importnat - Important!’s should only be used to override vendor classes that already have important! or to override vendor plugins that have inline CSS. Or if Blas says you can.
+* Limit the use of `!importnat` - They should only be used to override vendor classes that already have important! or to override vendor plugins that have inline CSS. Or if Blas says you can.
 
 ### Box model
 
