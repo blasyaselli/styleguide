@@ -1,5 +1,20 @@
 # Enterprise UI CSS/HTML Guidelines
 
+High level guidelines:
+
+* Be consistent.
+* Don't rewrite existing code to follow this guide.
+* Don't violate a guideline without a good reason.
+* A reason is good when you can convince a teammate.
+
+A note on the language:
+
+* "Avoid" means don't do it unless you have good reason.
+* "Don't" means there's never a good reason.
+* "Prefer" indicates a better option and its alternative to watch out for.
+* "Use" is a positive instruction.
+
+
 - [HTML Principles](#html-principles)
     - [Keep HTML Semantic as possible.](#keep-html-semantic-as-possible)
 - [CSS Principles](#css-principles)
@@ -16,23 +31,6 @@
 - [BEM - Basic](#bem---basic)
     - [BEM & SASS](#bem--sass)
     - [BEM & SASS - Modefiers and child elements](#bem--sass---modefiers-and-child-elements)
-
-
-High level guidelines:
-
-* Be consistent.
-* Don't rewrite existing code to follow this guide.
-* Don't violate a guideline without a good reason.
-* A reason is good when you can convince a teammate.
-
-A note on the language:
-
-* "Avoid" means don't do it unless you have good reason.
-* "Don't" means there's never a good reason.
-* "Prefer" indicates a better option and its alternative to watch out for.
-* "Use" is a positive instruction.
-
-
 
 
 
