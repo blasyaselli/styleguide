@@ -20,6 +20,7 @@ A note on the language:
     - [Keep HTML Semantic as possible.](#keep-html-semantic-as-possible)
     - [Accessibility](#accessibility)
 - [CSS Principles](#css-principles)
+    - [Anatomy](#anatomy-of-a-css-rule)
     - [Formatting](#formatting)
     - [Selectors](#selectors)
     - [Order](#order)
@@ -82,6 +83,8 @@ Test Software:
 - [NVA](https://www.nvaccess.org/download/)
 
 ## CSS Principles
+
+### Anatomy of a CSS Rule
 ![alt Example](images/cssrule.png)
 
 ### Formatting
