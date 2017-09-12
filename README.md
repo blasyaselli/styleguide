@@ -42,11 +42,8 @@ A note on the language:
 * 4
 
 ## HTML Principles
-* 1
-* 2
-* 3
-* 4
 
+### Keep HTML Semantic as possible.
 
 * 1
 * 2
@@ -60,7 +57,7 @@ A note on the language:
 * Use classes over IDs
 * Use least tags as possible
 
-    > ```html
+<!--     > ```html
     > <!-- bad -->
     > <div class="header">
     >   <div class="menu">
@@ -83,7 +80,7 @@ A note on the language:
     >     </div>
     >   </nav>
     > </header>
-    > ```
+    > ``` -->
 
 * 1
 * 2
