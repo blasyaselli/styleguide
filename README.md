@@ -36,7 +36,13 @@ A note on the language:
     - [BEM & SASS - Modefiers and child elements](#bem--sass---modefiers-and-child-elements)
 
 
+* 1
+* 2
+* 3
+* 4
+
 ## HTML Principles
+
 ### Keep HTML Semantic as possible.
 
 * 1
