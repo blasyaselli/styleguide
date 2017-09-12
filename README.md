@@ -47,7 +47,6 @@ A note on the language:
 * 3
 * 4
 
-### Keep HTML Semantic as possible.
 
 * 1
 * 2
