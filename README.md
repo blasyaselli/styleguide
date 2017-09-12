@@ -38,12 +38,12 @@ A note on the language:
 
 ## HTML Principles
 ### Keep HTML Semantic as possible.
-  * Prefer double quotes for attributes.
-  * Use HTML5 Tags when applicable as opposed to divs `<sections>, <articles>, <header>, <footer>, <nav> etc.`
-  * Respect heading hierarchy and nesting (SEO and Accessibility)
-  `H1 > H2 > H3 > H4 > H5`
-  * Use classes over IDs
-  * Use least tags as possible
+* Prefer double quotes for attributes.
+* Use HTML5 Tags when applicable as opposed to divs `<sections>, <articles>, <header>, <footer>, <nav> etc.`
+* Respect heading hierarchy and nesting (SEO and Accessibility)
+`H1 > H2 > H3 > H4 > H5`
+* Use classes over IDs
+* Use least tags as possible
 
     > ```html
     > <!-- bad -->
