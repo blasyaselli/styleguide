@@ -39,6 +39,11 @@ A note on the language:
 ## HTML Principles
 ### Keep HTML Semantic as possible.
 
+* 1
+* 2
+* 3
+* 4
+
 * Prefer double quotes for attributes.
 * Use HTML5 Tags when applicable as opposed to divs `<sections>, <articles>, <header>, <footer>, <nav> etc.`
 * Respect heading hierarchy and nesting (SEO and Accessibility)
