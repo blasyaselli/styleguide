@@ -42,6 +42,10 @@ A note on the language:
 * 4
 
 ## HTML Principles
+* 1
+* 2
+* 3
+* 4
 
 ### Keep HTML Semantic as possible.
 
