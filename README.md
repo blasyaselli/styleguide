@@ -57,30 +57,7 @@ A note on the language:
 * Use classes over IDs
 * Use least tags as possible
 
-<!--     > ```html
-    > <!-- bad -->
-    > <div class="header">
-    >   <div class="menu">
-    >     <div class="primary-menu">
-    >       <ul>
-    >           <li><a href=""><span>item 1</span></a></li>
-    >           <li><a href="">item 2</a></li>
-    >         </ul>
-    >     </div>
-    >   </div>
-    > </div>
-    > 
-    > <!-- good -->
-    > <header class="header">
-    >   <nav class="menu">
-    >       <ul class="menu--primary">
-    >         <li><a href="">item 1</a></li>
-    >         <li><a href="">item 2</a></li>
-    >       </ul>
-    >     </div>
-    >   </nav>
-    > </header>
-    > ``` -->
+
 
 * 1
 * 2
