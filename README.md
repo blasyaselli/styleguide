@@ -36,21 +36,10 @@ A note on the language:
     - [BEM & SASS - Modefiers and child elements](#bem--sass---modefiers-and-child-elements)
 
 
-* 1
-* 2
-* 3
-* 4
-
 ## HTML Principles
 
 ### Keep HTML Semantic as possible.
 
-asfasdf
-
-* 1
-* 2
-* 3
-* 4
 
 * Prefer double quotes for attributes.
 * Use HTML5 Tags when applicable as opposed to divs `<sections>, <articles>, <header>, <footer>, <nav> etc.`
@@ -59,12 +48,6 @@ asfasdf
 * Use classes over IDs
 * Use least tags as possible
 
-
-
-* 1
-* 2
-* 3
-* 4
 
 ### Accessibility 
 
